@@ -1,0 +1,39 @@
+h1{
+	font-family: Arial;
+}
+h1{
+	font-family: Corrier, Impact, Arial;
+} // It will use the first font that works with the browser or use a default font if none of them work
+
+Best if Sans-serif is used
+
+h1{
+	font-variant: small-caps;
+}
+
+h1, h2, span{
+	color:#0000FF; // Blue
+	background-color:#B3B3B3; // Grey
+}
+
+h1{
+	line-height: 50%;
+}
+
+<section>
+	<h2>About</h2>
+	details open><summary>My Childhood</summary>
+		I like summaries. </details>
+</section>
+
+details{
+	font-style: italic;
+}
+
+summary{
+	font-style: normal;
+}
+
+footer{
+	background: #.....(same as the header);
+}

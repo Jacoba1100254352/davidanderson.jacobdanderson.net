@@ -1,0 +1,131 @@
+                          /**************
+                          *   General   *
+                          **************/
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+/*  .row, .navbar {   
+    flex-direction: column;
+  }*/
+  :root{ --size_adjustment: 1; }
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  background-color: rgb(128,128,128);
+  font-family: sans-serif;
+  --size_adjustment: 1.5;
+  --header_height: calc(200px*var(--size_adjustment));
+  --name_plate_height: calc(2.5*var(--size_adjustment));
+  --institution_name_height: calc(2.1*var(--size_adjustment));
+  --nav_height: calc(4.125*var(--size_adjustment));
+  min-width: 700px;
+}
+.flexbox_container{ display: flex; justify-content: space-between; flex-flow: row wrap; }
+
+/**************
+*   Heading   *
+**************/
+
+
+#main_nav a{ display: block; }
+#main_nav a:link, #main_nav a:visited, #main_nav a:focus{ background: rgb(128,128,128); }
+#main_nav a:hover{  background: rgb(110,110,110); }
+#main_nav a:active{ background: rgb(100,100,100); }
+
+
+/*** Sub Menu ***/
+
+nav li ul{
+  position: absolute;
+  display: none;
+  padding-top: 1px;
+  width: 14%; /*As a default*/
+  width: calc(14% + 1px);
+  transform: translateX(-1px);
+}
+
+nav li:hover ul{ display: block; z-index: 1; }
+
+nav li ul li{
+  border: 1px solid black;
+  border-top: none;
+  clear: both;
+}
+
+
+/**************
+*   Section   *
+**************/
+
+section{
+  margin: 1rem 2%;
+  height: 30.5rem;
+  /*min-height: 30.5rem;*/
+  min-width: 640px;
+  height: auto;
+}
+section>div.flexbox_container li{
+  padding: 2.5px;
+  padding-left: 40px;
+}
+
+h2{ font-size: 20px; text-align: center; }
+h3{ font-size: 19px; font-weight: medium; text-align: center; }
+h4{ text-align: left; font-weight: bold; }
+p{ text-align: justify; }
+
+/************
+*   Aside   *
+************/
+
+aside, article{
+  margin-top: 2%;
+  padding: 15px;
+  background-color: rgb(160,160,160);
+}
+
+aside h2{ font-weight: bold; }
+
+/**************
+*   Article   *
+**************/
+
+article{ width: 49%; }
+article li{ list-style-position: inside; }
+article>ul{ list-style-type: disc; }
+article ul ul li{ list-style-type: circle; }
+article ol{ list-style-type: decimal; }
+article ol, article ul{ text-align: left; }
+article a{ color: blue; text-decoration: underline; }
+section.index_section article a{ color: black; text-decoration: none; }
+
+/*   ECE 6254 Specifications   */
+
+section>div>div{
+  order: 8;
+  margin-top: 1.1%;
+  width: 49%;
+}
+section>div>div>article{ width: 100%; }
+article.article_exam{ margin-top: 4.2%; /*align-self: flex-end;*/ }
+article.article_homework ul ul li{ padding-left: 100px; }
+article.article_homework>ul>li{ list-style-type: none; }
+/*article.article_schedule>ul{ font-weight: bold; }*/
+
+span.red{ color: rgb(220,25,0); }
+
+/*************
+*   Footer   *
+*************/
+
+footer{
+  display: flex;
+  flex-flow: row nowrap;
+  outline: 1px solid;
+  padding-top: 10px;
+  text-align: center;
+  height: 7.25rem;
+}
+footer div{ width: calc(100%/3) }

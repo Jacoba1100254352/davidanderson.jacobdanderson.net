@@ -1,0 +1,22 @@
+/************
+*   Aside   *
+************/
+
+aside, article{
+  margin-top: 2%;
+  padding: 15px;
+  background-color: rgb(160,160,160);
+}
+
+aside h2{ font-weight: bold; text-align: center; }
+aside h3{ font-size: 19px; font-weight: medium; text-align: center; }
+aside>p{ text-align: justify; }
+
+/**************
+*   Article   *
+**************/
+
+article{ width: 49%; }
+article ol, article ul{ text-align: left; }
+article ol{ list-style-type: decimal; }
+article a{ color: black; }
