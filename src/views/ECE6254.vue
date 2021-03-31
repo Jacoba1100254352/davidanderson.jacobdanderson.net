@@ -1009,25 +1009,49 @@ export default {
 </script>
 
 <style scoped>
-/*** Sub Menu ***/
+/*****************
+*   Navigation   *
+*****************/
 
-nav li ul {
-  position: absolute;
-  display: none;
-  padding-top: 1px;
-  width: 14%; /*As a default*/
-  width: calc(14% + 1px);
-  transform: translateX(-1px);
+nav.local {
+  position: relative;
+  margin-top: 2%;
 }
 
-nav li:hover ul {
+nav.local li {
+  width: calc(100% / 8);
+}
+
+nav.local a {
+  color: black;
   display: block;
-  z-index: 1;
+  padding: 3%;
 }
 
-nav li ul li {
-  border: 1px solid black;
-  border-top: none;
-  clear: both;
+ul.flexbox_container {
+  flex-wrap: nowrap;
+}
+
+li.pseudo_element {
+  outline: 1px solid;
+  background-color: rgb(160, 160, 160);
+}
+
+#pseudo_list li {
+  min-width: 80px;
+}
+
+#pseudo_list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+#real_list,
+#real_list li {
+  text-align: center;
+  align-items: center;
+  z-index: 1;
 }
 </style>

@@ -1,8 +1,10 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap
-from sklearn import datasets 
 from math import exp
+
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.colors import ListedColormap
+from sklearn import datasets
+
 
 # the logistic function
 def logistic_func(theta, x):
@@ -25,8 +27,7 @@ def log_grad(theta, x, y):
     
 # implementation of gradient descent for logistic regression
 def grad_desc(theta, x, y, alpha, tol, maxiter):
-    nll_vec = []
-    nll_vec.append(neg_log_like(theta, x, y))
+    nll_vec = [neg_log_like(theta, x, y)]
     nll_delta = 2.0*tol
     iter = 0
     while (nll_delta > tol) and (iter < maxiter):

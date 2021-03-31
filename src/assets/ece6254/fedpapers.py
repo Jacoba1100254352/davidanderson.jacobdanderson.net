@@ -1,5 +1,5 @@
-import numpy as np
 import json
+
 from sklearn.feature_extraction import text
 
 x = open('fedpapers_split.txt').read()
