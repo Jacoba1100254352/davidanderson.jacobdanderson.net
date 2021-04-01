@@ -224,9 +224,11 @@ body {
 ********************/
 
 @media only screen and (min-width: 1px) and (max-width: 960px) {
+
   :root {
     --size_adjustment: 1;
   }
+
 }
 
 /**************
@@ -446,7 +448,7 @@ footer {
   height: 7.5rem;
   width: 100%;
   /*min-width: 43.75rem;*/
-  background-color: rgb(247, 247, 247);
+  /*background-color: rgb(247, 247, 247);*/
 }
 
 footer a {
@@ -455,6 +457,14 @@ footer a {
 
 footer div {
   width: calc(100% / 3);
+}
+
+@media only screen and (min-width: 1px) and (max-width: 960px) {
+
+  article {
+    width: 100%;
+  }
+
 }
 
 </style>
