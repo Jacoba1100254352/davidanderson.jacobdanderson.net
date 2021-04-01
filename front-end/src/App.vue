@@ -187,20 +187,9 @@ table {
   border-spacing: 0;
 }
 
-
 /**************
 *   General   *
 **************/
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-/*@media screen and (max-width: 700px) {*/
-/*  !*  .row, .navbar {*/
-/*        flex-direction: column;*/
-/*      }*!*/
-/*  :root {*/
-/*    --size_adjustment: 1;*/
-/*  }*/
-/*}*/
 
 * {
   box-sizing: border-box;
@@ -208,6 +197,7 @@ table {
 
 body {
   background-color: rgb(128, 128, 128);
+  /*background-color: whitesmoke;*/
   font-family: sans-serif;
 
   --size_adjustment: 1.5;
@@ -220,20 +210,23 @@ body {
   --nav_height: calc(
     (4.7) * var(--size_adjustment)
   ); /* with 3 in header, use 4.125 = 33/8, for 2 use 6.25 = 50/8 = 25/4 */
-
-  /*display: grid;*/
-  /*grid-template-columns: repeat(1, 1fr);*/
-  /*grid-auto-rows: minmax(100%, auto);*/
-  /*grid-template-areas:*/
-  /*  "header"*/
-  /*  "section"*/
-  /*  "footer";*/
+  --common_background_color: rgb(160, 160, 160); /*#cccccc;*/
 }
 
 .flexbox_container {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
+}
+
+/********************
+*	  Media Screens   *
+********************/
+
+@media only screen and (min-width: 1px) and (max-width: 960px) {
+  :root {
+    --size_adjustment: 1;
+  }
 }
 
 /**************
@@ -285,14 +278,6 @@ img {
   outline: 1px solid black;
 }
 
-/*.router-view {*/
-/*  grid-area: section;*/
-/*}*/
-
-/*section {*/
-/*  grid-area: section;*/
-/*}*/
-
 #name_plate,
 a.name_plate {
   font-size: 25px;
@@ -318,9 +303,8 @@ a.name_plate {
 
 #main_nav > ul > li {
   width: 20%;
-  line-height: var(
-    --nav_height
-  ); /*Changes the box height!!! original was 4.125*/
+  /*Changes the box height!!! original was 4.125*/
+  line-height: var(--nav_height);
   outline: 1px solid black;
 }
 
@@ -341,6 +325,33 @@ a.name_plate {
 
 #main_nav a:active {
   background: rgb(100, 100, 100);
+}
+
+/*****************
+*   Navigation   *
+*****************/
+
+/*** Sub Menu ***/
+
+nav li ul {
+  position: absolute;
+  display: none;
+  padding-top: 1px;
+  width: 13.4%; /*As a default*/
+  /*width: calc(14% + 1px);*/
+  transform: translateX(-1px);
+}
+
+nav li:hover ul {
+  display: block;
+  z-index: 9;
+}
+
+nav li ul li {
+  border: 1px solid black;
+  border-top: none;
+  clear: both;
+  z-index: 9;
 }
 
 /**************
@@ -375,33 +386,6 @@ p {
   text-align: justify;
 }
 
-/*****************
-*   Navigation   *
-*****************/
-
-/*** Sub Menu ***/
-
-nav li ul {
-  position: absolute;
-  display: none;
-  padding-top: 1px;
-  width: 13.4%; /*As a default*/
-  /*width: calc(14% + 1px);*/
-  transform: translateX(-1px);
-}
-
-nav li:hover ul {
-  display: block;
-  z-index: 9;
-}
-
-nav li ul li {
-  border: 1px solid black;
-  border-top: none;
-  clear: both;
-  z-index: 9;
-}
-
 /************
 *   Aside   *
 ************/
@@ -410,7 +394,8 @@ aside,
 article {
   margin-top: 2%;
   padding: 15px;
-  background-color: rgb(160, 160, 160);
+  /*background-color: rgb(160, 160, 160);*/
+  background-color: var(--common_background_color);
 }
 
 aside h2 {
@@ -427,10 +412,6 @@ article {
 
 article li {
   list-style-position: inside;
-}
-
-article > ul {
-  list-style-type: disc;
 }
 
 article ul ul li {
@@ -451,48 +432,11 @@ article a {
   text-decoration: underline;
 }
 
-section.index_section article a {
-  color: black;
-  text-decoration: none;
-}
-
-/*   ECE 6254 Specifications   */
-
-section > div > div {
-  order: 8;
-  margin-top: 1.1%;
-  width: 49%;
-}
-
-section > div > div > article {
-  width: 100%;
-}
-
-article.article_exam {
-  margin-top: 4.2%; /*align-self: flex-end;*/
-}
-
-article.article_homework ul ul li {
-  padding-left: 100px;
-}
-
-article.article_homework > ul > li {
-  list-style-type: none;
-}
-
-/*article.article_schedule>ul{ font-weight: bold; }*/
-
-span.red {
-  color: rgb(220, 25, 0);
-}
-
 /*************
 *   Footer   *
 *************/
 
 footer {
-  position: sticky;
-  /*bottom: 0;*/
   /*grid-area: footer;*/
   display: flex;
   border-top: 1px solid;
@@ -502,13 +446,15 @@ footer {
   height: 7.5rem;
   width: 100%;
   /*min-width: 43.75rem;*/
+  background-color: rgb(247, 247, 247);
+}
+
+footer a {
+  color: black;
 }
 
 footer div {
   width: calc(100% / 3);
 }
 
-/********************
-*	  Media Screens   *
-********************/
 </style>

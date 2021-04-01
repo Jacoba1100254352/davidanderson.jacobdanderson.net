@@ -73,4 +73,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+article a { /*section.index_section article a*/
+  color: black;
+  text-decoration: none;
+}
+
+</style>

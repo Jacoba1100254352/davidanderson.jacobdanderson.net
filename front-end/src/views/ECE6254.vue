@@ -782,7 +782,7 @@
         </ul>
       </article>
 
-      <div class="flexbox_container" id="schedule/exam">
+      <div class="flexbox_container" id="schedule_exam">
         <article class="article_schedule" id="schedule2">
           <h2>Schedule</h2>
           <br />
@@ -993,7 +993,7 @@
         </article>
       </div>
     </div>
-    <br />
+<!--    <br />-->
   </section>
 </template>
 
@@ -1034,7 +1034,7 @@ ul.flexbox_container {
 
 li.pseudo_element {
   outline: 1px solid;
-  background-color: rgb(160, 160, 160);
+  background-color: var(--common_background_color);
 }
 
 #pseudo_list li {
@@ -1044,7 +1044,6 @@ li.pseudo_element {
 #pseudo_list {
   position: absolute;
   width: 100%;
-  height: 100%;
   top: 0;
 }
 
@@ -1054,4 +1053,85 @@ li.pseudo_element {
   align-items: center;
   z-index: 1;
 }
+
+nav.local, #pseudo_list, #real_list {
+  height: 3rem;
+}
+
+/**************
+*   Article   *
+**************/
+/*   ECE 6254 Specifications   */
+
+section > div > div {
+  order: 8;
+  margin-top: 1.1%;
+  width: 49%;
+}
+
+section > div > div > article {
+  width: 100%;
+}
+
+article.article_exam {
+  margin-top: 4.2%; /*align-self: flex-end;*/
+}
+
+article.article_homework ul ul li {
+  padding-left: 100px;
+}
+
+article.article_homework > ul > li {
+  list-style-type: none;
+}
+
+article > ul {
+  list-style-type: disc;
+}
+
+/*article.article_schedule>ul{ font-weight: bold; }*/
+
+/*******************
+*   Miscelaneous   *
+*******************/
+span.red {
+  color: rgb(220, 25, 0);
+}
+
+/********************
+*	  Media Screens   *
+********************/
+
+@media only screen and (min-width: 1px) and (max-width: 960px) {
+
+  article, #schedule_exam {
+    width: 100%;
+  }
+
+  #exam_info, #schedule2 {
+    margin-top: 2%;
+  }
+
+  #schedule {
+    margin-bottom: 0;
+  }
+
+  #schedule_exam {
+    margin-top: 0;
+  }
+
+  ul.flexbox_container {
+    flex-wrap: wrap;
+  }
+
+  nav.local li {
+    width: calc(100% / 4);
+  }
+
+  nav.local, #pseudo_list, #real_list {
+    height: 6rem;
+  }
+
+}
+
 </style>

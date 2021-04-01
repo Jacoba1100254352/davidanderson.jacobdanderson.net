@@ -120,4 +120,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+article > ul {
+  list-style-type: disc;
+}
+
+</style>
