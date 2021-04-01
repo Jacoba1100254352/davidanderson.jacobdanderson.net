@@ -201,16 +201,17 @@ body {
   font-family: sans-serif;
 
   --size_adjustment: 1.5;
+
   --header_height: calc(200px * var(--size_adjustment));
-  --name_plate_height: calc(
-    2.5 * var(--size_adjustment)
-  ); /* with 3 in header, use 2.5 */
+  --name_plate_height: calc(2.5 * var(--size_adjustment));
+  /* with 3 in header, use 2.5 */
 
   --institution_name_height: calc(2.1 * var(--size_adjustment));
-  --nav_height: calc(
-    (4.7) * var(--size_adjustment)
-  ); /* with 3 in header, use 4.125 = 33/8, for 2 use 6.25 = 50/8 = 25/4 */
+  --nav_height: calc(4.7 * var(--size_adjustment));
+  /* with 3 in header, use 4.125 = 33/8, for 2 use 6.25 = 50/8 = 25/4 */
   --common_background_color: rgb(160, 160, 160); /*#cccccc;*/
+
+  --text_scalar: 1;
 }
 
 .flexbox_container {
@@ -224,8 +225,11 @@ body {
 ********************/
 
 @media only screen and (min-width: 1px) and (max-width: 960px) {
-  :root {
-    --size_adjustment: 1;
+
+  * {
+    --size_adjustment: 1 !important;
+    --text_scalar: 0.8 !important;
+    --nav_height: calc(5 * var(--size_adjustment)) !important;
   }
 }
 
@@ -260,7 +264,7 @@ header {
 
 img {
   grid-area: img;
-  font-size: 25px;
+  font-size: calc((25px) * var(--text_scalar));
 }
 
 #name_plate {
@@ -280,7 +284,7 @@ img {
 
 #name_plate,
 a.name_plate {
-  font-size: 25px;
+  font-size: calc((25px) * var(--text_scalar));
   line-height: var(--name_plate_height);
   color: rgb(179, 163, 109);
   white-space: nowrap;
@@ -290,7 +294,7 @@ a.name_plate {
   grid-area: in;
   background-color: rgb(179, 163, 109);
   color: rgb(0, 48, 86);
-  font-size: 30px;
+  font-size: calc((30px) * var(--text_scalar));
   line-height: var(--institution_name_height);
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -367,12 +371,12 @@ section > div.flexbox_container li {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: calc((20px) * var(--text_scalar));
   text-align: center;
 }
 
 h3 {
-  font-size: 19px;
+  font-size: calc((19px) * var(--text_scalar));
   /*font-weight: medium;*/
   text-align: center;
 }
@@ -446,7 +450,7 @@ footer {
   height: 7.5rem;
   width: 100%;
   /*min-width: 43.75rem;*/
-  background-color: rgb(247, 247, 247);
+  /*background-color: rgb(247, 247, 247);*/
 }
 
 footer a {
@@ -455,6 +459,14 @@ footer a {
 
 footer div {
   width: calc(100% / 3);
+}
+
+@media only screen and (min-width: 1px) and (max-width: 960px) {
+
+  article {
+    width: 100%;
+  }
+
 }
 
 </style>
