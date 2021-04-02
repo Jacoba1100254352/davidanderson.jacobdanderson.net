@@ -546,9 +546,8 @@
             (January 10 &amp; 22)
             <ul>
               <li>
-                <a href="src/assets/ece6254/03-bayes-nearest-neighbors-4up.pdf"
-                  >4 slides per page for </a
-                ><a href="src/assets/ece6254/01-intro-4up.pdf">printing</a>
+                <a href="src/assets/ece6254/03-bayes-nearest-neighbors-4up.pdf">4 slides per page for </a>
+<!--                <a href="src/assets/ece6254/01-intro-4up.pdf">printing</a>-->
               </li>
             </ul>
           </li>

@@ -5,48 +5,24 @@
     ------------->
 
     <header id="header" class="section_1">
-      <img
-        id="prof_pic"
-        alt="David Anderson"
-        src="../public/Images/David's_typical_Profile_Picture.jpg"
-      />
 
-      <h1 id="name_plate">
+<!--            <img
+                id="prof_pic"
+                alt="David Anderson"
+                src="../public/Images/David-Anderson-Professional-Pic.jpg"
+            />-->
+
+<!--      <h1 id="name_plate">
         <router-link class="name_plate" to="/about">David Anderson</router-link>
-      </h1>
+      </h1>-->
 
-      <h2 id="institution_name">Georgia Institute of Technology</h2>
+<!--      <h2 id="institution_name">Georgia Institute of Technology</h2>-->
 
-      <!----------------
-      -   Navigation   -
-      ----------------->
+<!----------------
+-   Navigation   -
+----------------->
 
-      <!--      <nav-->
-      <!--          class="navbar navbar-expand-lg navbar-light"-->
-      <!--          style="background-color: #e3f2fd"-->
-      <!--      >-->
-      <!--        <div class="container-fluid">-->
-      <!--          <router-link-->
-      <!--              aria-current="page"-->
-      <!--              class="nav-item navbar-brand nav-link"-->
-      <!--              to="/"-->
-      <!--          >-->
-      <!--            Operation Opportunity-->
-      <!--          </router-link>-->
-      <!--          <button-->
-      <!--              aria-controls="navbarSupportedContent"-->
-      <!--              aria-expanded="false"-->
-      <!--              aria-label="Toggle navigation"-->
-      <!--              class="navbar-toggler"-->
-      <!--              data-bs-target="#navbarSupportedContent"-->
-      <!--              data-bs-toggle="collapse"-->
-      <!--              type="button"-->
-      <!--          >-->
-      <!--            <span class="navbar-toggler-icon"> </span>-->
-      <!--          </button>-->
-      <!--          <div id="navbarSupportedContent" class="collapse navbar-collapse">-->
-      <!--            <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">-->
-      <!--              <li class="nav-item">-->
+
       <nav id="main_nav">
         <ul class="semantic_list">
           <li><router-link to="/">Home</router-link></li>
@@ -61,20 +37,6 @@
           <li><router-link to="/consulting">Consulting</router-link></li>
           <li><router-link to="/about">About</router-link></li>
         </ul>
-        <!--          </ul>-->
-        <!--          <form class="d-flex">-->
-        <!--            <input-->
-        <!--                aria-label="Search"-->
-        <!--                class="form-control me-2"-->
-        <!--                placeholder="Search"-->
-        <!--                type="search"-->
-        <!--            />-->
-        <!--            <button class="btn btn-outline-success" type="submit">-->
-        <!--              Search-->
-        <!--            </button>-->
-        <!--          </form>-->
-        <!--        </div>-->
-        <!--      </div>-->
       </nav>
     </header>
 
@@ -118,7 +80,7 @@
           <ul class="semantic_list">
             <li>
               <a href="src/assets/CV/andersonCV2020.pdf" target="_blank"
-                >Curriculum Vitae</a
+              >Curriculum Vitae</a
               >
             </li>
           </ul>
@@ -196,8 +158,8 @@ table {
 }
 
 body {
-  background-color: rgb(128, 128, 128);
-  /*background-color: whitesmoke;*/
+  /*background-color: rgb(128, 128, 128);*/
+  background-color: whitesmoke;
   font-family: sans-serif;
 
   --size_adjustment: 1.5;
@@ -207,16 +169,18 @@ body {
   /* with 3 in header, use 2.5 */
 
   --institution_name_height: calc(2.1 * var(--size_adjustment));
-  --nav_height: calc(4.7 * var(--size_adjustment));
+  /*--nav_height: calc(4.7 * var(--size_adjustment));*/
+  --nav_height: calc(3 * var(--size_adjustment));
   /* with 3 in header, use 4.125 = 33/8, for 2 use 6.25 = 50/8 = 25/4 */
-  --common_background_color: rgb(160, 160, 160); /*#cccccc;*/
+  --common_background_color: white; /*#cccccc;*/
+  /*rgb(160, 160, 160)*/
 
   --text_scalar: 1;
 }
 
 .flexbox_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-flow: row wrap;
 }
 
@@ -233,6 +197,22 @@ body {
   }
 }
 
+header {
+  /*grid-area: header;*/
+  grid-template-columns: 1fr !important;
+  grid-template-areas: "mnav" !important;
+  height: auto !important;
+}
+
+#institution_name { /*#name_plate, img */
+  display: none;
+}
+
+nav li ul {
+  width: 20.1% !important; /*As a default*/
+}
+
+
 /**************
 *   Heading   *
 **************/
@@ -242,17 +222,18 @@ img {
   color: white;
   text-decoration: none;
   width: 100%;
+
 }
 
-img,
+/*img,
 header {
   background-color: rgb(0, 48, 86);
   height: var(--header_height);
   outline: 1px solid black;
-}
+}*/
 
-header {
-  /*grid-area: header;*/
+/*header {
+  !*grid-area: header;*!
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(30%, auto);
@@ -260,37 +241,40 @@ header {
     "img np   np"
     "img in   in"
     "img mnav mnav";
-}
+}*/
 
-img {
+/*#name_plate, img {
+  display: none;
+}*/
+
+/*img {
   grid-area: img;
-  font-size: calc((25px) * var(--text_scalar));
-}
+}*/
 
-#name_plate {
+/*#name_plate {
   grid-area: np;
-}
+}*/
 
-#main_nav {
+/*#main_nav {
   grid-area: mnav;
-}
+}*/
 
-#name_plate,
-#institution_name,
+/*#name_plate,*/
+/*#institution_name,*/
 #main_nav {
   text-align: center;
   outline: 1px solid black;
 }
 
-#name_plate,
+/*#name_plate,
 a.name_plate {
   font-size: calc((25px) * var(--text_scalar));
   line-height: var(--name_plate_height);
   color: rgb(179, 163, 109);
   white-space: nowrap;
-}
+}*/
 
-#institution_name {
+/*#institution_name {
   grid-area: in;
   background-color: rgb(179, 163, 109);
   color: rgb(0, 48, 86);
@@ -298,7 +282,7 @@ a.name_plate {
   line-height: var(--institution_name_height);
   text-overflow: ellipsis;
   white-space: nowrap;
-}
+}*/
 
 #main_nav > ul {
   display: flex;
@@ -309,22 +293,25 @@ a.name_plate {
   width: 20%;
   /*Changes the box height!!! original was 4.125*/
   line-height: var(--nav_height);
-  outline: 1px solid black;
+  /*outline: 1px solid black;*/
 }
 
 #main_nav a {
   display: block;
+  color: black;
 }
 
 #main_nav a:link,
 #main_nav a:visited,
 #main_nav a:focus {
-  background: rgb(128, 128, 128);
+  /*background: rgb(128, 128, 128);*/
+  background-color: var(--common_background_color);
 }
 
 #main_nav a:hover {
-  background: rgb(110, 110, 110);
-  color: black;
+  /*background: rgb(110, 110, 110);*/
+  background-color: whitesmoke;
+  /*color: black;*/
 }
 
 #main_nav a:active {

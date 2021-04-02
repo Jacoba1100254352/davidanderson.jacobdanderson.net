@@ -6,8 +6,19 @@
   <section class="Home text-center section_2 index_section">
     <!--   Aside   -->
 
-    <aside>
-      <h2>Personal Summary</h2>
+    <aside class="flexbox_container">
+      <figure>
+        <img
+            id="prof_pic"
+            alt="David Anderson"
+            src="../../public/Images/David-Anderson-Professional-Pic.jpg"
+        />
+        <figcaption>David Anderson</figcaption>
+      </figure>
+
+<!--      <h1 id="name_plate">
+        <router-link class="name_plate" to="/about">David Anderson</router-link>
+      </h1>-->
       <p>This is about me...</p>
     </aside>
 
@@ -18,16 +29,16 @@
         <h2>Recent Publications</h2>
         <br />
         <ol>
-          <li><a href="publications.html">PublicationTitle1</a></li>
-          <li><a href="publications.html">PublicationTitle2</a></li>
-          <li><a href="publications.html">PublicationTitle3</a></li>
-          <li><a href="publications.html">PublicationTitle4</a></li>
-          <li><a href="publications.html">PublicationTitle5</a></li>
+          <li><a href="#">PublicationTitle1</a></li>
+          <li><a href="#">PublicationTitle2</a></li>
+          <li><a href="#">PublicationTitle3</a></li>
+          <li><a href="#">PublicationTitle4</a></li>
+          <li><a href="#">PublicationTitle5</a></li>
         </ol>
       </article>
 
       <article class="article_2">
-        <h2><a href="Previous HTML files/courses.html">Courses Taught</a></h2>
+        <h2><router-link to="/courses">ECE 4270</router-link></h2>
         <br />
         <ul>
           <li>
@@ -36,7 +47,7 @@
               <!-- Currently Taught -->
             </h4>
             <ul>
-              <li><a href="Previous HTML files/ece6254.html">ECE 6254</a></li>
+              <li><router-link to="/ece6254">ECE 6254</router-link></li>
             </ul>
           </li>
           <li>
@@ -45,15 +56,15 @@
               <!-- Previously Taught -->
             </h4>
             <ul>
-              <li><a href="Previous HTML files/courses.html">ECE 4270</a></li>
-              <li><a href="Previous HTML files/courses.html">ECE 4271</a></li>
-              <li><a href="Previous HTML files/courses.html">ECE 2026</a></li>
-              <li><a href="Previous HTML files/courses.html">ECE 3055</a></li>
-              <li><a href="Previous HTML files/courses.html">ECE 6250</a></li>
-              <li><a href="Previous HTML files/courses.html">ECE 6253</a></li>
-              <li><a href="Previous HTML files/ece6271.html">ECE 6271</a></li>
-              <li><a href="Previous HTML files/courses.html">ECE 7252</a></li>
-              <li><a href="Previous HTML files/courses.html">ECE 2030</a></li>
+              <li><router-link to="/courses">ECE 4270</router-link></li>
+              <li><router-link to="/courses">ECE 4271</router-link></li>
+              <li><router-link to="/courses">ECE 2026</router-link></li>
+              <li><router-link to="/courses">ECE 3055</router-link></li>
+              <li><router-link to="/courses">ECE 6250</router-link></li>
+              <li><router-link to="/courses">ECE 6253</router-link></li>
+              <li><router-link to="/courses">ECE 6271</router-link></li>
+              <li><router-link to="/courses">ECE 7252</router-link></li>
+              <li><router-link to="/courses">ECE 2030</router-link></li>
             </ul>
           </li>
         </ul>
@@ -75,9 +86,19 @@ export default {
 
 <style scoped>
 
+img {
+  /*width: 25%;*/
+  /*height: 25%;*/
+  font-size: calc((25px) * var(--text_scalar));
+}
+
 article a { /*section.index_section article a*/
   color: black;
   text-decoration: none;
+}
+
+figure {
+  height: 100%;
 }
 
 </style>
