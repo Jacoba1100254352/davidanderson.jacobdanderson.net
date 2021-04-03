@@ -40,7 +40,7 @@
       </article>
 
       <article class="article_2">
-        <h2><router-link to="/courses">ECE 4270</router-link></h2>
+        <h2><router-link to="/courses">Courses</router-link></h2>
         <br />
         <ul>
           <li>

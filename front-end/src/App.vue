@@ -316,6 +316,7 @@ aside,
 article {
   padding: 15px;
   background-color: var(--common_background_color); /*rgb(160, 160, 160);*/
+  border-radius: 0.5%;
 }
 
 aside h2 {
