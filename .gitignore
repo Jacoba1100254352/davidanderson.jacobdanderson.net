@@ -3,6 +3,10 @@ node_modules
 /dist
 venv
 
+David's_typical_Profile_Picture.jpg
+David_in_Cowboy_hat,_wide_view.jpg
+David_in_a_Cowboy_hat.jpg
+David_in_a_Cowboy_hat_face.jpg
 
 # local env files
 .env.local

@@ -17,6 +17,8 @@
       </p>
     </aside>
 
+    <hr>
+
     <!--   Articles   -->
 
     <div class="flexbox_container">

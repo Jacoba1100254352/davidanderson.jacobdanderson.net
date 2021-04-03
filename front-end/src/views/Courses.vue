@@ -10,6 +10,8 @@
       <h2>Courses</h2>
     </aside>
 
+    <hr>
+
     <!--   Articles   -->
 
     <div class="flexbox_container">

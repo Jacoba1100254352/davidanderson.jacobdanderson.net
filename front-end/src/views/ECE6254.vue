@@ -1055,6 +1055,7 @@ li.pseudo_element {
 
 nav.local, #pseudo_list, #real_list {
   height: 3rem;
+  margin-bottom: 1%;
 }
 
 /**************

@@ -159,19 +159,18 @@ table {
 
 body {
   /*background-color: rgb(128, 128, 128);*/
-  background-color: whitesmoke;
+  /*background-color: whitesmoke;*/
+  /*background-color: #b7a771;*/
+  background-color: #b3a36c;
   font-family: sans-serif;
 
   --size_adjustment: 1.5;
 
   --header_height: calc(200px * var(--size_adjustment));
   --name_plate_height: calc(2.5 * var(--size_adjustment));
-  /* with 3 in header, use 2.5 */
 
   --institution_name_height: calc(2.1 * var(--size_adjustment));
-  /*--nav_height: calc(4.7 * var(--size_adjustment));*/
   --nav_height: calc(3 * var(--size_adjustment));
-  /* with 3 in header, use 4.125 = 33/8, for 2 use 6.25 = 50/8 = 25/4 */
   --common_background_color: white; /*#cccccc;*/
   /*rgb(160, 160, 160)*/
 
@@ -197,22 +196,6 @@ body {
   }
 }
 
-header {
-  /*grid-area: header;*/
-  grid-template-columns: 1fr !important;
-  grid-template-areas: "mnav" !important;
-  height: auto !important;
-}
-
-#institution_name { /*#name_plate, img */
-  display: none;
-}
-
-nav li ul {
-  width: 20.1% !important; /*As a default*/
-}
-
-
 /**************
 *   Heading   *
 **************/
@@ -221,43 +204,11 @@ a,
 img {
   color: white;
   text-decoration: none;
-  width: 100%;
-
 }
 
-/*img,
-header {
-  background-color: rgb(0, 48, 86);
-  height: var(--header_height);
-  outline: 1px solid black;
-}*/
-
-/*header {
-  !*grid-area: header;*!
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(30%, auto);
-  grid-template-areas:
-    "img np   np"
-    "img in   in"
-    "img mnav mnav";
-}*/
-
-/*#name_plate, img {
-  display: none;
-}*/
-
-/*img {
-  grid-area: img;
-}*/
-
-/*#name_plate {
-  grid-area: np;
-}*/
-
-/*#main_nav {
-  grid-area: mnav;
-}*/
+img {
+  width: 70%;
+}
 
 /*#name_plate,*/
 /*#institution_name,*/
@@ -265,24 +216,6 @@ header {
   text-align: center;
   outline: 1px solid black;
 }
-
-/*#name_plate,
-a.name_plate {
-  font-size: calc((25px) * var(--text_scalar));
-  line-height: var(--name_plate_height);
-  color: rgb(179, 163, 109);
-  white-space: nowrap;
-}*/
-
-/*#institution_name {
-  grid-area: in;
-  background-color: rgb(179, 163, 109);
-  color: rgb(0, 48, 86);
-  font-size: calc((30px) * var(--text_scalar));
-  line-height: var(--institution_name_height);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}*/
 
 #main_nav > ul {
   display: flex;
@@ -304,18 +237,16 @@ a.name_plate {
 #main_nav a:link,
 #main_nav a:visited,
 #main_nav a:focus {
-  /*background: rgb(128, 128, 128);*/
-  background-color: var(--common_background_color);
+  background-color: #b7a771; /*var(--common_background_color);*/ /*rgb(128, 128, 128);*/
 }
 
 #main_nav a:hover {
-  /*background: rgb(110, 110, 110);*/
-  background-color: whitesmoke;
+  background-color: #b3a36c; /*whitesmoke;*/ /*rgb(110, 110, 110);*/
   /*color: black;*/
 }
 
 #main_nav a:active {
-  background: rgb(100, 100, 100);
+  background: #ac9a5d; /*rgb(100, 100, 100);*/
 }
 
 /*****************
@@ -328,8 +259,7 @@ nav li ul {
   position: absolute;
   display: none;
   padding-top: 1px;
-  width: 13.4%; /*As a default*/
-  /*width: calc(14% + 1px);*/
+  width: 20.1%;
   transform: translateX(-1px);
 }
 
@@ -341,7 +271,7 @@ nav li:hover ul {
 nav li ul li {
   border: 1px solid black;
   border-top: none;
-  clear: both;
+  /*clear: both;*/
   z-index: 9;
 }
 
@@ -350,7 +280,9 @@ nav li ul li {
 **************/
 
 section {
-  margin: 1rem 2%;
+  /*margin: 1rem 2%;*/
+  padding: 3rem 2%;
+  background-color: #f3f1e8;
 }
 
 section > div.flexbox_container li {
@@ -364,7 +296,6 @@ h2 {
 
 h3 {
   font-size: calc((19px) * var(--text_scalar));
-  /*font-weight: medium;*/
   text-align: center;
 }
 
@@ -383,10 +314,8 @@ p {
 
 aside,
 article {
-  margin-top: 2%;
   padding: 15px;
-  /*background-color: rgb(160, 160, 160);*/
-  background-color: var(--common_background_color);
+  background-color: var(--common_background_color); /*rgb(160, 160, 160);*/
 }
 
 aside h2 {
@@ -399,6 +328,15 @@ aside h2 {
 
 article {
   width: 49%;
+  margin-top: 1%;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+section > div.flexbox_container {
+  justify-content: space-between;
 }
 
 article li {
@@ -428,7 +366,6 @@ article a {
 *************/
 
 footer {
-  /*grid-area: footer;*/
   display: flex;
   border-top: 1px solid;
   flex-flow: row nowrap;
@@ -436,7 +373,6 @@ footer {
   text-align: center;
   height: 7.5rem;
   width: 100%;
-  /*min-width: 43.75rem;*/
   /*background-color: rgb(247, 247, 247);*/
 }
 

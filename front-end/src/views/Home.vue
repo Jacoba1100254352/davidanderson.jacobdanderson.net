@@ -13,7 +13,7 @@
             alt="David Anderson"
             src="../../public/Images/David-Anderson-Professional-Pic.jpg"
         />
-        <figcaption>David Anderson</figcaption>
+<!--        <figcaption>David Anderson</figcaption>-->
       </figure>
 
 <!--      <h1 id="name_plate">
@@ -21,6 +21,8 @@
       </h1>-->
       <p>This is about me...</p>
     </aside>
+
+    <hr>
 
     <!--   Articles   -->
 
@@ -87,7 +89,7 @@ export default {
 <style scoped>
 
 img {
-  /*width: 25%;*/
+  width: 50%;
   /*height: 25%;*/
   font-size: calc((25px) * var(--text_scalar));
 }
@@ -99,6 +101,11 @@ article a { /*section.index_section article a*/
 
 figure {
   height: 100%;
+}
+
+figure, p {
+  width: 50%;
+  text-align: center;
 }
 
 </style>
