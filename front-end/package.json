@@ -2,14 +2,25 @@
   "name": "front-end",
   "version": "1.0.0",
   "description": "",
-  "main": ".eslintrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "@babel/plugin-transform-class-properties": "^7.22.5",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.22.11",
+    "@babel/plugin-transform-optional-chaining": "^7.23.0",
+    "@vue/cli-service": "^5.0.8",
     "axios": "^1.5.0",
-    "moment": "^2.29.4"
+    "consolidate": "^1.0.1",
+    "graphql-ws": "^5.14.0",
+    "moment": "^2.29.4",
+    "svgo": "^3.0.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
   }
 }
