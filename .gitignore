@@ -1,5 +1,5 @@
-.DS_Store
-node_modules
+**/.DS_Store
+**/node_modules
 /dist
 venv
 old-images
@@ -22,3 +22,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+**/.idea
+**/package-lock.json
