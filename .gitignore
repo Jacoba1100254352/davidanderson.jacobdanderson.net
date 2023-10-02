@@ -1,5 +1,7 @@
 **/.DS_Store
 **/node_modules
+**/package-lock.json
+.idea
 /dist
 venv
 old-images
@@ -23,7 +25,5 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-**/.idea
-**/package-lock.json
 .run
 venv
