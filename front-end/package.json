@@ -1,26 +1,28 @@
 {
   "name": "front-end",
   "version": "1.0.0",
-  "description": "",
+  "description": "A front-end project using Vue.js, jQuery, and Axios.",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lint:js": "eslint --ext .js,.vue src",
+    "lint:css": "stylelint \"src/**/*.{vue,css,scss}\""
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jacob Anderson",
+  "license": "MIT",
   "dependencies": {
-    "@apollo/server": "^4.9.3",
-    "@babel/plugin-transform-class-properties": "^7.22.5",
-    "@babel/plugin-transform-nullish-coalescing-operator": "^7.22.11",
-    "@babel/plugin-transform-optional-chaining": "^7.23.0",
+    "@babel/eslint-parser": "^7.22.15",
     "@vue/cli-service": "^5.0.8",
     "axios": "^1.5.1",
-    "consolidate": "^1.0.3",
-    "graphql-ws": "^5.14.1",
-    "moment": "^2.29.4",
-    "svgo": "^3.0.2",
+    "jquery": "^3.7.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0"
   }
 }
